@@ -14,7 +14,11 @@ export default function Header() {
         <div className="topbar-inner">
           <div>
             <div className="brand-kicker">Yön Havacılık</div>
-            <div className="brand-title">Savunma Sistemleri</div>
+            <img
+  src="/logo.png"
+  alt="Yön Havacılık"
+  style={{ height: 36 }}
+/>
           </div>
 
           <nav className="nav">
