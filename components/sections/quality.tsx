@@ -1,27 +1,29 @@
 import Container from "@/components/ui/container";
 
-const quality = [
-  "Müşteri ihtiyaçlarını doğru analiz eden sürdürülebilir çözüm yaklaşımı",
-  "Kaliteyi, güvenilirliği ve zamanında teslimi merkeze alan operasyon disiplini",
-  "Sürekli gelişim ve ölçülebilir süreç yönetimi",
-  "Uzman kadro ve çözüm ortaklarıyla yüksek hizmet standardı",
+const items = [
+  "Müşteri ihtiyaçlarını doğru analiz eden çözüm yaklaşımı",
+  "Zamanında teslim ve operasyonel disiplin",
+  "Sürekli gelişim odaklı kalite anlayışı",
+  "Uzman kadro ve güçlü iş ortakları ile sürdürülebilir hizmet",
 ];
 
 export default function QualitySection() {
   return (
-    <section id="kalite" className="section-tight">
+    <section className="section">
       <Container>
-        <div className="quality-wrap two-col">
-          <div>
-            <div className="eyebrow">Kalite Politikası</div>
-            <h2 className="section-title">
-              Güven, süreklilik ve ölçülebilir kalite üzerine kurulu anlatım
-            </h2>
-          </div>
+        <div className="quality-wrap">
+          <div className="eyebrow">Kalite Politikamız</div>
+          <h2 className="section-title">
+            Güvenilirlik, süreklilik ve ölçülebilir süreç yönetimi
+          </h2>
+          <p className="section-text" style={{ maxWidth: 860 }}>
+            Her projede kalite standardını yükseltmeyi, süreçleri şeffaf ve
+            sürdürülebilir şekilde yönetmeyi hedefliyoruz.
+          </p>
 
-          <div style={{ display: "grid", gap: 16 }}>
-            {quality.map((item) => (
-              <div key={item} className="card-soft">
+          <div className="grid-4" style={{ marginTop: 32 }}>
+            {items.map((item) => (
+              <div key={item} className="partner-card">
                 {item}
               </div>
             ))}
