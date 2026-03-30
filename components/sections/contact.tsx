@@ -17,10 +17,13 @@ export default function ContactSection() {
         <div className="two-col">
           <div>
             <div className="eyebrow">İletişim</div>
-            <h2 className="section-title">Kurumsal görüşme ve teklif talepleri</h2>
+            <h2 className="section-title">
+              Görüşme ve teklif talepleriniz için bizimle iletişime geçin
+            </h2>
             <p className="section-text" style={{ maxWidth: 620 }}>
-              Projeleriniz, iş birlikleri ve teknik talepleriniz için bizimle iletişime geçin.
-              Ekibimiz en kısa sürede sizinle dönüş sağlayacaktır.
+              Projeleriniz, iş birlikleri ve teknik talepleriniz için ekibimizle
+              iletişime geçebilirsiniz. İlgili birimlerimiz en kısa sürede size
+              dönüş sağlayacaktır.
             </p>
           </div>
 
