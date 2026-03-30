@@ -494,3 +494,24 @@ img {
     font-size: 20px;
   }
 }
+
+.contact-box form input,
+.contact-box form textarea {
+  width: 100%;
+  margin-top: 12px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  font-size: 14px;
+  outline: none;
+}
+
+.contact-box form input:focus,
+.contact-box form textarea:focus {
+  border-color: #0f172a;
+}
+
+.contact-box form button {
+  margin-top: 16px;
+  width: 100%;
+}
