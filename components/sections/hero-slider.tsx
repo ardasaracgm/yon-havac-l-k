@@ -1,4 +1,13 @@
 "use client";
+
+import { useEffect, useState } from "react";
+import Container from "@/components/ui/container";
+
+const slides = [
+  {
+    title: "Stratejik Havacılık Çözümleri",
+    text: "Danışmanlık, gözlem-denetleme ve proje yönetimi süreçlerini modern bir kurumsal dil ile sunan yeni nesil web yapısı.",
+    image:
       "https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad?auto=format&fit=crop&w=1600&q=80",
   },
   {
@@ -32,12 +41,15 @@ export default function HeroSlider() {
         <div className="hero-grid">
           <div>
             <div className="hero-chip">Havacılık ve Savunma Çözümleri</div>
+
             <h1 className="hero-title">
               Açık tonlarda, güçlü ve kurumsal bir yeni nesil savunma sitesi.
             </h1>
+
             <p className="hero-text">
-              Yön Havacılık için yeniden kurgulanan bu yapı; danışmanlık, proje geliştirme,
-              gözlem-denetleme ve eğitim başlıklarını daha modern bir tasarım diliyle sunar.
+              Yön Havacılık için yeniden kurgulanan bu yapı; danışmanlık, proje
+              geliştirme, gözlem-denetleme ve eğitim başlıklarını daha modern bir
+              tasarım diliyle sunar.
             </p>
 
             <div className="hero-actions">
@@ -57,7 +69,11 @@ export default function HeroSlider() {
                   key={slide.title}
                   className={`slide ${activeIndex === index ? "active" : ""}`}
                 >
-                  <img src={slide.image} alt={slide.title} className="slide-image" />
+                  <img
+                    src={slide.image}
+                    alt={slide.title}
+                    className="slide-image"
+                  />
                   <div className="hero-overlay" />
                   <div className="slide-content">
                     <div className="slide-kicker">Hero Slider</div>
@@ -75,7 +91,9 @@ export default function HeroSlider() {
                   type="button"
                   aria-label={`Slide ${index + 1}`}
                   onClick={() => setActiveIndex(index)}
-                  className={`slider-dot ${activeIndex === index ? "active" : ""}`}
+                  className={`slider-dot ${
+                    activeIndex === index ? "active" : ""
+                  }`}
                 />
               ))}
             </div>
