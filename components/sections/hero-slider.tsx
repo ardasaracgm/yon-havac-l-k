@@ -5,20 +5,23 @@ import Container from "@/components/ui/container";
 
 const slides = [
   {
-    title: "Stratejik Havacılık Çözümleri",
-    text: "Danışmanlık, gözlem-denetleme ve proje yönetimi süreçlerini modern bir kurumsal dil ile sunan yeni nesil web yapısı.",
+    kicker: "Stratejik Yaklaşım",
+    title: "Savunma ve havacılıkta stratejik çözüm yaklaşımı",
+    text: "Teknik uzmanlık, saha ihtiyaçları ve operasyonel gereksinimler doğrultusunda kurumlara özel çözümler geliştiriyoruz.",
     image:
       "https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad?auto=format&fit=crop&w=1600&q=80",
   },
   {
-    title: "Savunma Sistemleri Yaklaşımı",
-    text: "Teknik yetkinliği, sade tasarımı ve yüksek güven hissi veren içerik düzeni ile öne çıkan kurumsal sunum altyapısı.",
+    kicker: "Teknik Değerlendirme",
+    title: "Teknik değerlendirme ve güvenilir karar desteği",
+    text: "Sistem seçimi, uygunluk analizi, performans değerlendirmesi ve uygulama süreçlerinde güçlü teknik destek sunuyoruz.",
     image:
       "https://images.unsplash.com/photo-1544016768-982d1554f0b9?auto=format&fit=crop&w=1600&q=80",
   },
   {
-    title: "Proje Yönetimi ve Eğitim",
-    text: "Şirketin faaliyet alanlarını daha açık anlatan, görüşme ve teklif talebi toplamaya odaklı hızlı Next.js deneyimi.",
+    kicker: "Proje ve Eğitim",
+    title: "Proje yönetimi, eğitim ve uygulama desteği",
+    text: "Planlamadan uygulamaya, raporlamadan eğitime kadar tüm süreçleri disiplinli ve ölçülebilir bir yapıyla yönetiyoruz.",
     image:
       "https://images.unsplash.com/photo-1529074963764-98f45c47344b?auto=format&fit=crop&w=1600&q=80",
   },
@@ -39,17 +42,22 @@ export default function HeroSlider() {
     <section className="hero">
       <Container>
         <div className="hero-grid">
+          
+          {/* SOL */}
           <div>
-            <div className="hero-chip">Havacılık ve Savunma Çözümleri</div>
+            <div className="hero-chip">
+              Yön Havacılık | Savunma ve Havacılık Çözümleri
+            </div>
 
             <h1 className="hero-title">
-              Açık tonlarda, güçlü ve kurumsal bir yeni nesil savunma sitesi.
+              Savunma ve havacılık projelerinde güvenilir çözüm ortağı
             </h1>
 
             <p className="hero-text">
-              Yön Havacılık için yeniden kurgulanan bu yapı; danışmanlık, proje
-              geliştirme, gözlem-denetleme ve eğitim başlıklarını daha modern bir
-              tasarım diliyle sunar.
+              Yön Havacılık; danışmanlık, teknik değerlendirme, tedarik yönetimi,
+              proje koordinasyonu ve eğitim başlıklarında kurumlara çözüm sunar.
+              İhtiyaca uygun, sürdürülebilir ve sonuç odaklı yaklaşımıyla
+              süreçlerinizi uçtan uca destekler.
             </p>
 
             <div className="hero-actions">
@@ -62,6 +70,7 @@ export default function HeroSlider() {
             </div>
           </div>
 
+          {/* SAĞ */}
           <div className="hero-card">
             <div className="slider-shell">
               {slides.map((slide, index) => (
@@ -75,8 +84,9 @@ export default function HeroSlider() {
                     className="slide-image"
                   />
                   <div className="hero-overlay" />
+
                   <div className="slide-content">
-                    <div className="slide-kicker">Hero Slider</div>
+                    <div className="slide-kicker">{slide.kicker}</div>
                     <div className="slide-title">{slide.title}</div>
                     <p className="slide-text">{slide.text}</p>
                   </div>
@@ -98,6 +108,7 @@ export default function HeroSlider() {
               ))}
             </div>
           </div>
+
         </div>
       </Container>
     </section>
