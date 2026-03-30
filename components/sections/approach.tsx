@@ -1,31 +1,52 @@
 import Container from "@/components/ui/container";
 
+const items = [
+  "Danışmanlık ve proje geliştirme odaklı yapı",
+  "Tedarik ve lojistik süreçlerinde koordinasyon",
+  "Teknik değerlendirme ve uygulama takibi",
+  "Sade, güvenilir ve kurumsal hizmet yaklaşımı",
+];
+
 export default function ApproachSection() {
   return (
-    <section id="yaklasim" className="approach section">
+    <section className="approach section">
       <Container>
         <div className="two-col">
           <div>
             <div className="eyebrow">Kurumsal Yaklaşım</div>
             <h2 className="section-title">
-              Danışmanlık, tedarik ve proje süreçlerini tek bir dilde birleştirir
+              Güven, disiplin ve sürdürülebilir çözüm yaklaşımı
             </h2>
           </div>
 
-          <div className="copy-stack">
-            <p>
-              Yeni sitede ana amaç, teknik kabiliyeti metin kalabalığıyla değil; net bölümleme,
-              güçlü başlıklar ve seçilmiş referans diliyle göstermek olacaktır.
-            </p>
-            <p>
-              Böylece ziyaretçi birkaç saniye içinde şirketin hangi alanlarda hizmet verdiğini,
-              nasıl değer ürettiğini ve hangi başlıkta iletişime geçmesi gerektiğini anlayacaktır.
-            </p>
-            <p>
-              Tasarım dili; açık gri, taş ve nötr metalik tonlar üzerine kurulur. Görseller ise
-              daha kurumsal, daha temiz ve yeniden tasarlanmış havacılık-savunma
-              kompozisyonlarından oluşur.
-            </p>
+          <div>
+            <div className="copy-stack">
+              <p>
+                Yön Havacılık, savunma ve havacılık alanındaki projelerde teknik
+                bilgi ile operasyonel ihtiyacı aynı zeminde buluşturan bir çalışma
+                anlayışına sahiptir.
+              </p>
+
+              <p>
+                Her projede müşteri ihtiyaçlarını doğru analiz ederek uygulanabilir,
+                verimli ve sürdürülebilir çözümler üretmeyi hedefler. Uzun vadeli iş
+                birlikleri ve güven odaklı yaklaşım temel prensibimizdir.
+              </p>
+            </div>
+
+            <div
+              style={{
+                display: "grid",
+                gap: 16,
+                marginTop: 24,
+              }}
+            >
+              {items.map((item) => (
+                <div key={item} className="info-card">
+                  {item}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </Container>
