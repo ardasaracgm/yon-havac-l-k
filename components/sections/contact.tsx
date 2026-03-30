@@ -1,13 +1,13 @@
+"use client";
+
 import Container from "@/components/ui/container";
 import { useState } from "react";
 
 export default function ContactSection() {
   const [sent, setSent] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    // şimdilik fake submit (backend bağlarız sonra)
     setSent(true);
   };
 
@@ -15,30 +15,24 @@ export default function ContactSection() {
     <section id="iletisim" className="contact section">
       <Container>
         <div className="two-col">
-          {/* SOL */}
           <div>
             <div className="eyebrow">İletişim</div>
-            <h2 className="section-title">
-              Kurumsal görüşme ve teklif talepleri
-            </h2>
+            <h2 className="section-title">Kurumsal görüşme ve teklif talepleri</h2>
             <p className="section-text" style={{ maxWidth: 620 }}>
               Projeleriniz, iş birlikleri ve teknik talepleriniz için bizimle iletişime geçin.
-              Ekibimiz en kısa sürede sizinle iletişime geçecektir.
+              Ekibimiz en kısa sürede sizinle dönüş sağlayacaktır.
             </p>
           </div>
 
-          {/* SAĞ */}
           <div className="contact-box">
-            
-            {/* FORM */}
             <form onSubmit={handleSubmit} className="card-soft">
               {!sent ? (
                 <>
-                  <input placeholder="Ad Soyad" required />
-                  <input placeholder="Firma" />
-                  <input type="email" placeholder="E-posta" required />
-                  <input placeholder="Telefon" />
-                  <textarea placeholder="Mesajınız" rows={4} required />
+                  <input name="name" placeholder="Ad Soyad" required />
+                  <input name="company" placeholder="Firma" />
+                  <input name="email" type="email" placeholder="E-posta" required />
+                  <input name="phone" placeholder="Telefon" />
+                  <textarea name="message" placeholder="Mesajınız" rows={4} required />
 
                   <button className="button-primary" type="submit">
                     Gönder
@@ -51,7 +45,6 @@ export default function ContactSection() {
               )}
             </form>
 
-            {/* BİLGİLER */}
             <div className="card-soft">
               <div className="meta-label">Telefon</div>
               <div className="meta-value">+90 312 442 21 81</div>
@@ -66,7 +59,6 @@ export default function ContactSection() {
               <div className="meta-label">Adres</div>
               <div className="meta-value">Beysukent, Ankara</div>
             </div>
-
           </div>
         </div>
       </Container>
