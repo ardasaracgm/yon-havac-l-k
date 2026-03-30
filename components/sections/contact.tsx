@@ -1,3 +1,5 @@
+import Container from "@/components/ui/container";
+
 export default function ContactSection() {
   return (
     <section id="iletisim" className="contact section">
